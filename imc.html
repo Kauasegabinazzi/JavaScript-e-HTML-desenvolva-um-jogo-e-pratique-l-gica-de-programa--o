@@ -11,17 +11,18 @@
       pulaLinha();
     }
 
+    function calcula(peso, altura){
+        var imc =  peso / (altura * altura);
+        mostra('o imc é ' + imc);
+    }
+
     var peso = 80;
     var altura = 1.80;
-
-    var imcPessoa = peso / (altura * altura);
-
-    mostra('o imc é ' + imcPessoa);
+    calcula(peso, altura);
 
     var anotherPeso = 70;
     var anotherAltura = 1.75;
+    calcula(anotherPeso, anotherAltura)
 
-    var anotherImc = anotherPeso / (anotherAltura * anotherAltura);
-    mostra('o outro imc é ' + anotherImc);
 
 </script>
