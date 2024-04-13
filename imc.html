@@ -1,6 +1,5 @@
 <meta charset="UTF-8">
 <script>
-
     function pulaLinha() {
         document.write("<br>");
         document.write("<br>");
@@ -12,8 +11,7 @@
     }
 
     function calcula(peso, altura) {
-        var imc = peso / (altura * altura);
-        return imc;
+        return peso / (altura * altura);
     }
 
     var peso = 80;
@@ -26,6 +24,11 @@
 
     mostra(imcOne);
     mostra(anotherImc);
+
+    // var total = imcOne + anotherImc;
+    var total = calcula(peso, altura) + calcula(anotherPeso, anotherAltura);
+    document.write('A soma dos imc é ' + total);
+
 
 
 </script>
