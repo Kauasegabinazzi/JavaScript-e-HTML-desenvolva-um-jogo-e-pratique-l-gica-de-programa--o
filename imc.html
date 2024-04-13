@@ -1,28 +1,31 @@
 <meta charset="UTF-8">
 <script>
 
-    function pulaLinha(){
+    function pulaLinha() {
         document.write("<br>");
         document.write("<br>");
     }
 
-    function mostra(recebe){
-     document.write(recebe);
-      pulaLinha();
+    function mostra(recebe) {
+        document.write(recebe);
+        pulaLinha();
     }
 
-    function calcula(peso, altura){
-        var imc =  peso / (altura * altura);
-        mostra('o imc é ' + imc);
+    function calcula(peso, altura) {
+        var imc = peso / (altura * altura);
+        return imc;
     }
 
     var peso = 80;
     var altura = 1.80;
-    calcula(peso, altura);
+    var imcOne = calcula(peso, altura);
 
     var anotherPeso = 70;
     var anotherAltura = 1.75;
-    calcula(anotherPeso, anotherAltura)
+    var anotherImc = calcula(anotherPeso, anotherAltura);
+
+    mostra(imcOne);
+    mostra(anotherImc);
 
 
 </script>
