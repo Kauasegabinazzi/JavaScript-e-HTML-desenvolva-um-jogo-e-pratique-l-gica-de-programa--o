@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(recebe){
+     document.write(recebe);
+      pulaLinha();
+    }
+
+    var vitorias = parseInt(prompt('quantas vitorias'));
+    var empate = parseInt(prompt('quantos impates'));
+
+    var pontos = vitorias * 3 + empate;
+
+    mostra('os pontos é ' + pontos);
+
+</script>
