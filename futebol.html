@@ -1,14 +1,14 @@
 <meta charset="UTF-8">
 <script>
 
-    function pulaLinha(){
+    function pulaLinha() {
         document.write("<br>");
         document.write("<br>");
     }
 
-    function mostra(recebe){
-     document.write(recebe);
-      pulaLinha();
+    function mostra(recebe) {
+        document.write(recebe);
+        pulaLinha();
     }
 
     var vitorias = parseInt(prompt('quantas vitorias'));
@@ -17,5 +17,13 @@
     var pontos = vitorias * 3 + empate;
 
     mostra('os pontos é ' + pontos);
-
+    if (pontos > 28) {
+        mostra('melhor');
+    }
+    if (pontos < 28) {
+        mostra('menor');
+    }
+    if (pontos == 28) {
+        mostra('igual');
+    }
 </script>
