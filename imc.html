@@ -34,7 +34,17 @@
     var peso = prompt('informe seu peso');
 
     var imc = calcula(peso, altura);
-    document.write(nome + ',o imc é ' + imc);
+    mostra(nome + ',o imc é ' + imc);
+
+    if (imc < 18.5) {
+        mostra('abaixo');
+    }
+    if (imc > 35) {
+        mostra('acima');
+    }
+    if (imc >= 18.5 && imc <= 35) {
+        mostra('bom');
+    }
 
 
 </script>
