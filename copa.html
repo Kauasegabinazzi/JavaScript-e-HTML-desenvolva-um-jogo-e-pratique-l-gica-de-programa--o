@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var limite = parseInt(prompt('qual numero?'))
+    var anoCopaLol = 1930;
+
+    while(anoCopaLol <= limite){
+        mostra('teve copa em' + anoCopaLol);
+        anoCopaLol = anoCopaLol + 4;
+    }
+
+
+
+</script>
