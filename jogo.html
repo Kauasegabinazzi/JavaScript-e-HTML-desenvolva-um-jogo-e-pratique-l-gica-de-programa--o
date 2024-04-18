@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(recebe){
+     document.write(recebe);
+      pulaLinha();
+    }
+
+    var number = Math.round(Math.random() * 10);
+    var chute = parseInt(prompt('digite seu chute'));
+
+    if(chute == number){
+        mostra('acertou');
+    }
+    else{
+        mostra('errou, numero é ' + number);
+    }
+
+</script>
