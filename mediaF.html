@@ -12,4 +12,19 @@
         pulaLinha();
     }
 
+    var totalF = parseInt(prompt('quantidade de familiares?'));
+
+    var numero = 1;
+
+    var totalId = 0;
+
+    while (numero <= totalF) {
+        var idade = parseInt(prompt('informe idade do familiar:'));
+        totalId = totalId + idade;
+        numero++;
+    }
+    var media = totalId / totalF;
+    mostra('media das idades é ' + media);
+    mostra('END');
+
 </script>
