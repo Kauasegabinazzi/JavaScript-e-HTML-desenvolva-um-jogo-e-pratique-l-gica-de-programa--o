@@ -1,24 +1,44 @@
 <meta charset="UTF-8">
 <script>
 
-    function pulaLinha(){
+    function pulaLinha() {
         document.write("<br>");
         document.write("<br>");
     }
 
-    function mostra(recebe){
-     document.write(recebe);
-      pulaLinha();
+    function mostra(recebe) {
+        document.write(recebe);
+        pulaLinha();
     }
+
+    // var number = Math.round(Math.random() * 10);
+    // var chute = parseInt(prompt('digite seu chute'));
+
+    // if(chute == number){
+    //     mostra('acertou');
+    // }
+    // else{
+    //     mostra('errou, numero é ' + number);
+    // }
 
     var number = Math.round(Math.random() * 10);
-    var chute = parseInt(prompt('digite seu chute'));
 
-    if(chute == number){
-        mostra('acertou');
+    var tentativas = 1;
+
+    while (tentativas <= 3) {
+
+        var chute = parseInt(prompt('digite seu chute'));
+
+        if (chute == number) {
+            mostra('acertou,o numero é ' + number);
+            break;
+        }
+        else {
+            mostra('errou!');
+        }
+        tentativas++;
     }
-    else{
-        mostra('errou, numero é ' + number);
-    }
+
+    mostra('FIM');
 
 </script>
