@@ -1,14 +1,22 @@
 <meta charset="UTF-8">
 <script>
 
-    function pulaLinha(){
+    function pulaLinha() {
         document.write("<br>");
         document.write("<br>");
     }
 
-    function mostra(recebe){
-     document.write(recebe);
-      pulaLinha();
+    function mostra(recebe) {
+        document.write(recebe);
+        pulaLinha();
     }
-    
+
+    for (var linha = 1; linha <= 3; linha++) {
+        for (var coluna = 1; coluna <= 10; coluna++) {
+            document.write('*');
+        }
+        pulaLinha();
+    }
+
+
 </script>
