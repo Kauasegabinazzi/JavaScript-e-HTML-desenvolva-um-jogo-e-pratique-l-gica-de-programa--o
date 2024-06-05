@@ -1,14 +1,23 @@
 <meta charset="UTF-8">
+
+<input/>
+<button>compare</button>
+
 <script>
+    var secret = 5;
+    var input = document.querySelector('input');
+    
+    function verific(){
 
-    function pulaLinha(){
-        document.write("<br>");
-        document.write("<br>");
+        if(input.value == secret){
+            alert('you are right');
+        }
+        else{
+            alert('you are wrong');
+        }
     }
 
-    function mostra(recebe){
-     document.write(recebe);
-      pulaLinha();
-    }
+    var button = document.querySelector('button');
+    button.onclick = verific;
 
 </script>
