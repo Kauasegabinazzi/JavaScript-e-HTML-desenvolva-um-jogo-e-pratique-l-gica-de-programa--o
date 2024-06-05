@@ -4,15 +4,24 @@
 <button>compare</button>
 
 <script>
-    var secret = Math.round(Math.random() * 10);
+
+    var secret = [Math.round(Math.random() * 10), Math.round(Math.random() * 10), Math.round(Math.random() * 10)];
+
     var input = document.querySelector('input');
     input.focus();
     function verific(){
 
-        if(input.value == secret){
-            alert('you are right');
+        var find = false;
+
+        for(var posicao = 0; posicao < secret.length; posicao++){
+
+            if(input.value == secret[posicao]){
+                alert('you are right');
+                find = true;
+            }
         }
-        else{
+            
+        if(find == false){
             alert('you are wrong');
         }
 
