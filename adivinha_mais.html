@@ -4,9 +4,9 @@
 <button>compare</button>
 
 <script>
-    var secret = 5;
+    var secret = Math.round(Math.random() * 10);
     var input = document.querySelector('input');
-    
+    input.focus();
     function verific(){
 
         if(input.value == secret){
@@ -15,6 +15,9 @@
         else{
             alert('you are wrong');
         }
+
+        input.value = '';
+        input.focus();
     }
 
     var button = document.querySelector('button');
