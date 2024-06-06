@@ -4,26 +4,25 @@
 <button>compare</button>
 
 <script>
-
     var secret = sorteiaNumeros(3);
 
     // secret.push(5);
 
     var input = document.querySelector('input');
     input.focus();
-    function verific(){
 
+    function verific() {
         var find = false;
 
-        for(var posicao = 0; posicao < secret.length; posicao++){
-
-            if(input.value == secret[posicao]){
+        for (var posicao = 0; posicao < secret.length; posicao++) {
+            if (input.value == secret[posicao]) {
                 alert('you are right');
                 find = true;
+                break;
             }
         }
-            
-        if(find == false){
+
+        if (!find) {
             alert('you are wrong');
         }
 
@@ -31,24 +30,36 @@
         input.focus();
     }
 
-    function sorteia(){
-       return Math.round(Math.random() * 10);
+    function sorteia() {
+        return Math.round(Math.random() * 10);
     }
 
-    function sorteiaNumeros(quantidade){
+    function sorteiaNumeros(quantidade) {
         var secret = [];
-
         var numero = 1;
 
-        while(numero <= quantidade){
-            secret.push(sorteia());
-            numero++;
+        while (numero <= quantidade) {
+            var aleatorio = sorteia();
+
+            if (aleatorio !== 0) {
+                var find = false;
+
+                for (var posicao = 0; posicao < secret.length; posicao++) {
+                    if (secret[posicao] == aleatorio) {
+                        find = true;
+                        break;
+                    }
+                }
+                if (!find) { 
+                    secret.push(aleatorio);
+                    numero++;
+                }
+            }
         }
 
         return secret;
-
     }
+
     var button = document.querySelector('button');
     button.onclick = verific;
-
 </script>
