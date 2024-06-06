@@ -5,7 +5,8 @@
 
 <script>
 
-    var secret = [Math.round(Math.random() * 10), Math.round(Math.random() * 10), Math.round(Math.random() * 10)];
+    var secret = sorteiaNumeros();
+    // secret.push(5);
 
     var input = document.querySelector('input');
     input.focus();
@@ -27,6 +28,10 @@
 
         input.value = '';
         input.focus();
+    }
+
+    function sorteia(){
+       return Math.round(Math.random() * 10);
     }
 
     var button = document.querySelector('button');
