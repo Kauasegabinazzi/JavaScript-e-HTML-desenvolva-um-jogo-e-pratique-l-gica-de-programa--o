@@ -5,7 +5,8 @@
 
 <script>
 
-    var secret = sorteiaNumeros();
+    var secret = sorteiaNumeros(3);
+
     // secret.push(5);
 
     var input = document.querySelector('input');
@@ -34,6 +35,19 @@
        return Math.round(Math.random() * 10);
     }
 
+    function sorteiaNumeros(quantidade){
+        var secret = [];
+
+        var numero = 1;
+
+        while(numero <= quantidade){
+            secret.push(sorteia());
+            numero++;
+        }
+
+        return secret;
+
+    }
     var button = document.querySelector('button');
     button.onclick = verific;
 
